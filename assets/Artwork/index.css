@@ -1,0 +1,334 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.navbar .left {
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+}
+
+.navbar .right {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .right img {
+    width: 24px;
+    height: 24px;
+}
+
+.navbar .right a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .right a:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 0;
+}
+
+.navbar .hamburger {
+    display: none;
+}
+.navbar .hamburger:hover {
+    cursor: pointer;
+} 
+
+.bar1,
+.bar2,
+.bar3 {
+    background-color: black;
+    height: 4px;
+    width: 36px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.mobileNav {
+    width: 80px;
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: -160px;
+    padding: 16px;
+    transition: transform 0.5s;
+}
+
+.openDrawer {
+    transform: translateX(-160px);
+}
+
+.mobileNav a {
+    text-decoration: none;
+    color: black;
+    margin: 16px 0;
+}
+
+.mobileNav a:hover {
+    text-decoration: underline;
+}
+
+.mobileNav img {
+    width: 24px;
+    height: 24px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-areas:
+        "abstract abstract pencilman"
+        "abstract abstract pencilgirl"
+        "dragons dragons pencilgirl"
+        "nursingroom tinkerbell tinkerbell"
+        "pencildog pencildog bodyart"
+        "wcbaby wccat wccat"
+        "pencilcat  pencilcat pencilwoman"
+        "pendragon silvermist silvermist";
+    gap: 16px;
+    width: 100%;
+}
+
+#abstract {
+    grid-area: abstract;
+}
+
+#pencilman {
+    grid-area: pencilman;
+}
+
+#nursingroom {
+    grid-area: nursingroom;
+}
+
+#dragons {
+    grid-area: dragons;
+}
+
+#pencilgirl {
+    grid-area: pencilgirl;
+}
+
+#tinkerbell {
+    grid-area: tinkerbell;
+}
+
+#pencilcat {
+    grid-area: pencilcat;
+}
+
+#pencilwoman {
+    grid-area: pencilwoman;
+}
+
+#pendragon {
+    grid-area: pendragon;
+}
+
+#wccat {
+    grid-area: wccat;
+}
+
+#wcbaby {
+    grid-area: wcbaby;
+}
+
+#pencildog {
+    grid-area: pencildog;
+}
+
+#bodyart {
+    grid-area: bodyart;
+}
+
+#silvermist {
+    grid-area: silvermist;
+}
+
+.project {
+    position: relative;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-width: 148.156px;
+}
+
+.project .overlay {
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: all .2s ease;
+}
+
+.project .overlay:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+    padding: 64px;
+    min-width: 210px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .project-grid {
+        grid-template-areas:
+            "abstract abstract"
+            "pencilman pencilgirl"
+            "dragons dragons"
+            "tinkerbell tinkerbell"
+            "nursingroom bodyart"
+            "pencildog pencildog"
+            "wccat wccat "
+            "wcbaby pencilcat"
+            "pencilwoman pendragon"
+            "silvermist silvermist";
+    }
+}
+
+@media only screen and (max-width: 676px) {
+    .navbar {
+        padding: 16px 24px;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background-color: white;
+        width: 100%;
+    }
+
+    .navbar .right {
+        display: none;
+    }
+
+    .navbar .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer {
+        padding: 32px;
+    }
+
+    .project .overlay {
+        font-size: 24px;
+    }
+
+    .project-grid {
+        margin-top: 100px;
+        gap: 16px 0px;
+        grid-template-areas:
+            "abstract abstract"
+            "pencilman pencilman"
+            "pencilgirl pencilgirl"
+            "dragons dragons"
+            "tinkerbell tinkerbell"
+            "nursingroom nursingroom"
+            "pencildog pencildog"
+            "wccat wccat "
+            "wcbaby bodyart"
+            "pencilcat pencilcat"
+            "pencilwoman pencilwoman"
+            "pendragon pendragon"
+            "silvermist silvermist";
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .project-grid {
+        margin-top: 64px;
+    }
+
+    .project .overlay {
+        font-size: 16px;
+    }
+}
+
+.animateBar1 {
+    animation: flipbar1 1s 1;
+    animation-fill-mode: forwards;
+}
+
+.animateBar2 {
+    animation: fadebar2 1s 1;
+    animation-fill-mode: forwards;
+}
+
+.animateBar3 {
+    animation: flipbar3 1s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flipbar1 {
+    from {
+        transform: rotate(0) translate(0);
+    }
+
+    to {
+        transform: rotate(45deg) translate(4px, 10px);
+    }
+}
+
+@keyframes flipbar3 {
+    from {
+        transform: rotate(0) translate(0);
+    }
+
+    to {
+        transform: rotate(-45deg) translate(4px, -10px);
+    }
+}
+
+@keyframes fadebar2 {
+    from {
+        transform: scalex(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scalex(0);
+        opacity: 0;
+    }
+}
